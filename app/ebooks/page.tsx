@@ -1,17 +1,12 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, BookOpen, Download, Mail } from 'lucide-react';
+import { ArrowLeft, Mail } from 'lucide-react';
+import Catalogo from './catalogo';
 
 export const metadata: Metadata = {
   title: 'E-books gratuitos',
   description: 'Biblioteca de e-books gratuitos da Mentoria para o Sucesso — Artur Andrade. Conteúdos de comunicação, vendas, liderança e desenvolvimento profissional.'
 };
-
-const livros = [
-  { categoria: 'COMUNICAÇÃO', titulo: 'A Arte da Comunicação Intencional', descricao: 'Guia para novos consultores: postura, clareza, escuta e comunicação com propósito.' },
-  { categoria: 'CARREIRA E VENDAS', titulo: 'Águias Não Caçam Moscas', descricao: 'Reflexões sobre carreira comercial, construção de carteira e desenvolvimento de equipes.' },
-  { categoria: 'DESENVOLVIMENTO', titulo: 'Cinco Passos para Resultados Extraordinários', descricao: 'Cinco hábitos para aprender, conectar, agir, resolver e compartilhar resultados todos os dias.' }
-];
 
 export default function EbooksPage() {
   return <main>
@@ -25,16 +20,8 @@ export default function EbooksPage() {
     <section className="section wrap">
       <div className="eyebrow">CONHECIMENTO ACESSÍVEL</div>
       <h1 style={{maxWidth:850}}>Biblioteca de <em>e-books gratuitos.</em></h1>
-      <p className="section-intro">Um espaço para compartilhar conhecimento sobre comunicação, vendas, liderança e desenvolvimento profissional. Os materiais serão disponibilizados gratuitamente à medida que forem finalizados.</p>
-      <div className="courses ebooks-grid">
-        {livros.map((livro, i) => <article className="course" key={livro.titulo}>
-          <BookOpen size={35} color="#d8b56b" aria-hidden="true"/>
-          <span className="course-tag">{livro.categoria}</span>
-          <h3>{livro.titulo}</h3>
-          <p>{livro.descricao}</p>
-          <span className="soon"><Download size={14} style={{verticalAlign:'middle',marginRight:7}}/>PDF EM PREPARAÇÃO</span>
-        </article>)}
-      </div>
+      <p className="section-intro">Um espaço para compartilhar conhecimento sobre comunicação, vendas, liderança e desenvolvimento profissional. Os materiais serão disponibilizados gratuitamente mediante cadastro simples, assim que os arquivos e o armazenamento seguro estiverem prontos.</p>
+      <Catalogo />
       <div className="ebooks-note">
         <h2 style={{fontSize:30,letterSpacing:-1}}>Em breve, downloads gratuitos.</h2>
         <p>Os arquivos ainda não estão publicados. Enquanto isso, entre em contato para saber mais sobre os materiais.</p>
