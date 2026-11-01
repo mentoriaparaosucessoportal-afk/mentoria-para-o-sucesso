@@ -12,7 +12,7 @@ export default function EbooksPage() {
   return <main>
     <header className="topbar wrap">
       <Link className="brand" href="/" aria-label="Voltar ao início">
-        <span className="brand-mark">M<span>.</span></span>
+        <img className="brand-lion" src="/leao-mentoria.svg" alt="" width="52" height="52" />
         <span className="brand-text">MENTORIA <small>PARA O SUCESSO <b>— ARTUR ANDRADE</b></small></span>
       </Link>
       <Link className="top-cta" href="/"><ArrowLeft size={16}/> Página inicial</Link>
