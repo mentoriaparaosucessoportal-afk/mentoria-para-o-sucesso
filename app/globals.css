@@ -154,3 +154,11 @@ h1 em{background:linear-gradient(115deg,#fff0bf,#d8ac5d 48%,#a77c3d);background-
 .entry-footer{color:#8993a3;font-size:9px;letter-spacing:2px;text-align:center;padding:12px}
 @media(max-width:530px){.entry-page{padding:28px 16px 20px}.entry-kicker{font-size:8px;letter-spacing:2.2px}.entry-brand-title{font-size:clamp(43px,13vw,65px)}.entry-brand-sub{font-size:13px;letter-spacing:5px}.entry-brand-author{font-size:11px;letter-spacing:4px}.entry-divider{margin:25px auto 20px}.entry-content h1{font-size:15px;line-height:1.7}.entry-caption{font-size:8px;letter-spacing:1.8px}.entry-footer{font-size:8px;letter-spacing:1px}}
 @media(prefers-reduced-motion:reduce){.entry-button{transition:none}.entry-button:hover{transform:none}}
+
+/* Logomarca realista original na entrada */
+.entry-full-logo{width:min(470px,78vw);height:auto;aspect-ratio:1;object-fit:contain;display:block;margin:10px auto 20px;filter:drop-shadow(0 12px 45px #d8a74a20)}
+.entry-content:has(.entry-full-logo) h1{font-size:clamp(16px,2vw,21px);margin:4px 0 25px;line-height:1.55}
+.entry-content:has(.entry-full-logo) .entry-kicker{margin:12px 0 12px}
+.entry-content:has(.entry-full-logo) .entry-caption{margin:22px 0 0}
+@media(max-height:850px){.entry-full-logo{width:min(380px,68vw);margin:0 auto 10px}.entry-content:has(.entry-full-logo) h1{margin-bottom:20px}}
+@media(max-width:530px){.entry-full-logo{width:min(390px,90vw)}.entry-content:has(.entry-full-logo) h1{font-size:15px}}
